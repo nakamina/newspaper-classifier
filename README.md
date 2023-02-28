@@ -141,7 +141,7 @@ python manage.py train_classifier \
 ### ニュース記事分類くんウェブアプリを動かす
 
 - 以下の django custom command である [`predict`](https://github.com/nakamina/newspaper-classifier/blob/master/predictor/management/commands/predict.py) コマンドを用いてニュース記事分類くんのウェブアプリを動かす。
-- このコマンドで呼ばれている実装は [predictor/streamlit.py](https://github.com/nakamina/newspaper-classifier/blob/master/predictor/utils.py) を参照
+- このコマンドで呼ばれている実装は [predictor/streamlit.py](https://github.com/nakamina/newspaper-classifier/blob/master/predictor/streamlit.py) を参照
 
 - デフォルトの設定
 
