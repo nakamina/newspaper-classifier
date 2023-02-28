@@ -8,11 +8,11 @@
 
 本プロジェクトは [`django`](https://github.com/django/django) をベースとした 3 つのアプリケーションから構成されている。これらのアプリケーションは [django の custom command](https://docs.djangoproject.com/en/4.1/howto/custom-management-commands/) を利用して実装されている：
 
-- [`crawler`](https://github.com/nakamina/newspaper-classifier/tree/main/crawler) app.
+- [`crawler`](https://github.com/nakamina/newspaper-classifier/tree/master/crawler) app.
   - [gunosy.com](https://gunosy.com/) からニュース記事を取得する君
-- [`classifier`](https://github.com/nakamina/newspaper-classifier/tree/main/classifier) app.
+- [`classifier`](https://github.com/nakamina/newspaper-classifier/tree/master/classifier) app.
   - `crawler` で取得した記事を元にカテゴリを予測する分類器を学習させる君
-- [`predictor`](https://github.com/nakamina/newspaper-classifier/tree/main/predictor) app.
+- [`predictor`](https://github.com/nakamina/newspaper-classifier/tree/master/predictor) app.
   - `classifier` で学習させた分類器を元に 記事 URL からカテゴリを予測する君
 
 ## 使用している主要ライブラリ
@@ -100,8 +100,8 @@ poetry install
 
 ### 学習用のニュース記事を収集する
 
-- 以下の django custom command である [`crawl`](https://github.com/nakamina/newspaper-classifier/blob/main/crawler/management/commands/crawl.py) コマンドを実行する。
-- このコマンドで呼ばれている実装は [crawler/utils.py](https://github.com/nakamina/newspaper-classifier/blob/main/crawler/utils.py) を参照
+- 以下の django custom command である [`crawl`](https://github.com/nakamina/newspaper-classifier/blob/master/crawler/management/commands/crawl.py) コマンドを実行する。
+- このコマンドで呼ばれている実装は [crawler/utils.py](https://github.com/nakamina/newspaper-classifier/blob/master/crawler/utils.py) を参照
 
 - デフォルトの設定
 
@@ -119,8 +119,8 @@ python manage.py crawl \
 
 ### ニュース記事分類くんを訓練する
 
-- 以下の django custom command である [`train_classifier`](https://github.com/nakamina/newspaper-classifier/blob/main/classifier/management/commands/train_classifier.py) コマンドを実行する。
-- このコマンドで呼ばれている実装は [classifier/utils.py](https://github.com/nakamina/newspaper-classifier/blob/main/classifier/utils.py) を参照
+- 以下の django custom command である [`train_classifier`](https://github.com/nakamina/newspaper-classifier/blob/master/classifier/management/commands/train_classifier.py) コマンドを実行する。
+- このコマンドで呼ばれている実装は [classifier/utils.py](https://github.com/nakamina/newspaper-classifier/blob/master/classifier/utils.py) を参照
 
 - デフォルトの設定
 
@@ -140,8 +140,8 @@ python manage.py train_classifier \
 
 ### ニュース記事分類くんウェブアプリを動かす
 
-- 以下の django custom command である [`predict`](https://github.com/nakamina/newspaper-classifier/blob/main/predictor/management/commands/predict.py) コマンドを用いてニュース記事分類くんのウェブアプリを動かす。
-- このコマンドで呼ばれている実装は [predictor/utils.py](https://github.com/nakamina/newspaper-classifier/blob/main/predictor/utils.py) を参照
+- 以下の django custom command である [`predict`](https://github.com/nakamina/newspaper-classifier/blob/master/predictor/management/commands/predict.py) コマンドを用いてニュース記事分類くんのウェブアプリを動かす。
+- このコマンドで呼ばれている実装は [predictor/utils.py](https://github.com/nakamina/newspaper-classifier/blob/master/predictor/utils.py) を参照
 
 - デフォルトの設定
 
